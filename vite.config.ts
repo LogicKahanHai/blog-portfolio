@@ -7,5 +7,4 @@ export default defineConfig({
   build: {
     outDir: '/var/www/html/blog-website',
   },
-  base: '/logic-website/'
 })
