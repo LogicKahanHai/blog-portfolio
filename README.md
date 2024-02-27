@@ -1,3 +1,1 @@
 # Logic's Knowledgebase
-
-changes
