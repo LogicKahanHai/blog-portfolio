@@ -10,12 +10,15 @@ export default {
     },
     extend: {
       animation: {
-        slowShow: "slowShow 1s ease-in-out",
+        slowShow: "slowShow 0.5s ease-in-out",
       },
       keyframes: {
         slowShow: {
-          "0%": { opacity: 0, visibility: "hidden" },
-          "100%": { opacity: 1, visibility: "visible" },
+          "0%": { opacity: 0, innerHeight: 0, display: "none" },
+          "100%": {
+            opacity: 100,
+            display: "inline-flex",
+          },
         },
       },
     },
