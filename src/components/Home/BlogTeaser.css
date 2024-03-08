@@ -1,0 +1,18 @@
+.extraText {
+    display: none;
+    transition: opacity 0.5s, visibility 1s linear;
+}
+
+.blogTeaser:hover .extraText {
+    display: block;
+}
+
+@keyframes displayNoneToBlock {
+    0% {
+        display: none;
+    }
+    100% {
+        display: block;
+    }
+}
+

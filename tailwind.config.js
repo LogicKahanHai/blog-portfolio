@@ -8,7 +8,17 @@ export default {
       laptop: "1024px",
       desktop: "1280px",
     },
-    extend: {},
+    extend: {
+      animation: {
+        slowShow: "slowShow 1s ease-in-out",
+      },
+      keyframes: {
+        slowShow: {
+          "0%": { opacity: 0, visibility: "hidden" },
+          "100%": { opacity: 1, visibility: "visible" },
+        },
+      },
+    },
   },
   plugins: [],
 };
