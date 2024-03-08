@@ -1,3 +1,4 @@
 import BlogTeaser from "./BlogTeaser";
+import BlogTeaserLoader from "./BlogTeaserLoader";
 
-export { BlogTeaser }
+export { BlogTeaser, BlogTeaserLoader }
