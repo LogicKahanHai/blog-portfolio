@@ -8,8 +8,21 @@ const Home: React.FC = () => {
     const topTags = ['React', 'JavaScript', 'TypeScript', 'CSS', 'HTML', 'Node.js', 'Express', 'MongoDB',]
 
     return (
-        <div className="w-full flex justify-center h-full items-center divide-x">
-            <div className="flex-1"></div>
+        <div className="w-full flex justify-center h-full items-start divide-x">
+            <div className="flex-1 w-1/4 p-10">
+                <div className="mb-10">
+                    <h1 className="text-3xl font-bold mb-5">Whoami</h1>
+                    <p className="text-lg mb-10">
+                        I'm a software developer and I love to write about my experiences and share my thoughts with the world. I hope you find something interesting here!
+                    </p>
+                </div>
+                <div className="mb-10">
+                    <h1 className="text-3xl font-bold mb-5">My Interests</h1>
+                    <p className="text-lg mb-10">
+                        I'm a software developer and I love to write about my experiences and share my thoughts with the world. I hope you find something interesting here!
+                    </p>
+                </div>
+            </div>
             <div className="flex-3 w-3/4 p-10">
                 <h1 className="text-3xl font-bold mb-5">What is this?</h1>
                 <p className="text-lg mb-10">
@@ -26,6 +39,7 @@ const Home: React.FC = () => {
                         </span>
                     ))}
                 </div>
+                <h1 className="text-3xl font-bold mb-5">Some of my best projects</h1>
                 <div className="flex flex-col gap-5">
                     {blogs.map((blog, index) => (
                         <HomeComponents.BlogTeaser

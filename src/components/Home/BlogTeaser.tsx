@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
+
 import { Link } from "react-router-dom";
-import "./BlogTeaser.css";
-import { useState } from "react";
-import { Transition } from "@headlessui/react";
+
 type DateTimeFormatOptions = Intl.DateTimeFormatOptions;
 
 type BlogTeaserProps = {
