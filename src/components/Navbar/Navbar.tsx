@@ -1,8 +1,20 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css'
+import { useScrollPosition } from '../../hooks/useScrollPosition';
 function NavBar() {
+
+    function classNames(...classes: (string | boolean | undefined)[]) {
+        return classes.filter(Boolean).join(' ')
+    }
+
+    const scrollPosition = useScrollPosition();
     return (
-        <header className="bg-gray-50 sticky z-50">
+        <header className={
+            classNames(
+                scrollPosition > 0 ? 'shadow-md' : '',
+                'sticky top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b-2 mb-2'
+            )
+        }>
             <div className="mx-auto max-w-screen-xl px-4 py-8 tablet:px-6 tablet:py-12 laptop:px-8">
                 <div className="flex phone:max-laptop:flex-col phone:max-laptop:items-center phone:max-laptop:justify-center laptop:flex-row laptop:justify-around">
                     <div className="text-center tablet:text-left">

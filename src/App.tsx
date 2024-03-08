@@ -7,7 +7,9 @@ function App() {
   return (
     <>
       <NavBar />
-      <Outlet />
+      <main className="relative w-full h-full max-h-screen scroll-smooth">
+        <Outlet />
+      </main>
     </>
   )
 }

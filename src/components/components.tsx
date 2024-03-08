@@ -1,4 +1,12 @@
-import NavBar from "./Navbar/Navbar";
-import ErrorPage from "./Error/ErrorPage";
+import { lazy } from "react";
 
-export { NavBar, ErrorPage };
+import NavBar from "./Navbar/Navbar";
+// const NavBar = lazy(() => import("./Navbar/Navbar"));
+
+import ErrorPage from "./Error/ErrorPage";
+// const ErrorPage = lazy(() => import("./Error/ErrorPage"));
+
+import * as HomeComponents from "./Home/home";
+
+
+export { NavBar, ErrorPage, HomeComponents };

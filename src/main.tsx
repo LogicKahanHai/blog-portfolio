@@ -4,6 +4,8 @@ import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import * as Components from './components/components.tsx'
+import * as Pages from './pages/pages.tsx'
+import * as NetworkCalls from './network/network.tsx'
 
 const router = createBrowserRouter([
   {
@@ -11,7 +13,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Components.ErrorPage />,
     children: [
-      { index: true, element: <h1>Home</h1> },
+      { index: true, element: <Pages.Home />, loader: () => NetworkCalls.HomeCalls.getBlogTeasers() },
       { path: 'about', element: <h1>About</h1> },
     ]
   }
