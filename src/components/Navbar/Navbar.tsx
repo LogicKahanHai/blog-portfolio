@@ -26,7 +26,7 @@ export default function Navbar() {
 
             {/* desktop */}
             <header className="sticky top-0 left-0 right-0 z-50 hidden tablet:flex font-display">
-                <div className="flex justify-between items-center w-full h-20 bg-white shadow-md px-20">
+                <div className="flex justify-between items-center w-full py-8 bg-white shadow-md px-20">
                     {/* <div className="flex items-center gap-5"> */}
                     <div className="text-2xl font-bold text-gray-800 cursor-pointer">Logic Kahan Hai?</div>
                     <div className="flex items-center gap-5">
