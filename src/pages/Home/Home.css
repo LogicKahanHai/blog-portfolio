@@ -1,14 +1,38 @@
 .hero-img {
     object-fit: fill;
-    background-image: url('/public/trial.jpg');
-    /* background-repeat: no-repeat; */
-    background-position: 75% 45%; 
+    background-image: url('/trial.jpg');
+    background-repeat: no-repeat;
+    background-position: 75% 47%;
     border: 3px solid #2d2e32;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     animation: morph 8s ease-in-out infinite;
     /* height: 35rem;
     width: 35rem; */
     transition: all 1s ease-in-out;
+}
+
+@media screen and (min-width: 1280px) {
+    .hero-img {
+        background-position: 77% 47%;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1279px) {
+    .hero-img {
+        background-position: 75% 45%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 899px){
+    .hero-img {
+        background-position: 76% 45%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .hero-img {
+        background-position: 75% 44%;
+    }
 }
 
 @keyframes morph {

@@ -4,13 +4,15 @@ export default {
   theme: {
     screens: {
       phone: "320px",
-      tablet: "640px",
+      bigPhone: "480px",
+      tablet: "900px",
       laptop: "1024px",
       desktop: "1280px",
     },
     extend: {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
+        display: ["Pragmata", "sans-serif"],
       },
       animation: {
         slowShow: "slowShow 0.5s ease-in-out",

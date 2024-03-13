@@ -16,7 +16,7 @@ function App() {
     <>
       <div className='w-screen h-screen'>
         <NavBar />
-        <main className="relative w-full h-full max-h-screen scroll-smooth">
+        <main className="relative w-screen h-screen scroll-smooth">
           <Outlet />
         </main>
       </div>

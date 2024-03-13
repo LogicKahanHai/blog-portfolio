@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  @font-face {
+    font-family: 'Pragmata';
+    font-style: medium;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/public/fonts/Pragmata\ Medium.ttf) format('truetype');
+  }
+}
