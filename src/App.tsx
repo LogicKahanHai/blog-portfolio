@@ -14,9 +14,9 @@ function App() {
 
   return (
     <>
-      <div className='w-screen h-screen'>
+      <div className='flex flex-col'>
         <NavBar />
-        <main className="relative w-screen h-screen scroll-smooth">
+        <main className="scroll-smooth">
           <Outlet />
         </main>
         <Footer />
