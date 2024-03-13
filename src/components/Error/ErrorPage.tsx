@@ -21,7 +21,7 @@ export default function ErrorPage() {
             <h1 className="text-2xl font-bold mb-5">Oops!</h1>
             <p className="text-lg mb-3">Sorry, an unexpected error has occurred.</p>
             <p className="mb-4">
-                <i className="font-italic">{message}</i>
+                <i className="">{message}</i>
             </p>
 
             <Link to='/'>

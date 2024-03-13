@@ -9,6 +9,9 @@ export default {
       desktop: "1280px",
     },
     extend: {
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+      },
       animation: {
         slowShow: "slowShow 0.5s ease-in-out",
       },
