@@ -39,18 +39,7 @@ const LandingComponent: React.FC = () => {
         <>
 
             {/* phone */}
-            <PhoneLanding
-                webOpacity={webOpacity}
-                appOpacity={appOpacity}
-                webLoading={webLoading}
-                setWebLoading={setWebLoading}
-                appLoading={appLoading}
-                setAppLoading={setAppLoading}
-                setAppOpacity={setAppOpacity}
-                setWebOpacity={setWebOpacity}
-                toggleOpacity={toggleOpacity}
-                imageLoaded={imageLoaded}
-            />
+            <PhoneLanding />
 
 
 
@@ -157,7 +146,41 @@ const WebLanding: React.FC<PropsType> = ({ webOpacity, appOpacity, setAppOpacity
 
 
 
-const PhoneLanding: React.FC<PropsType> = ({ webOpacity, appOpacity, setAppOpacity, setWebOpacity, toggleOpacity, webLoading, appLoading, setWebLoading, setAppLoading, imageLoaded }: PropsType) => {
+const PhoneLanding: React.FC = () => {
+    const [webLoading, setWebLoading] = useState(true);
+    const [appLoading, setAppLoading] = useState(true);
+    const [webOpacity, setWebOpacity] = useState(false);
+    const [appOpacity, setAppOpacity] = useState(false);
+
+    function toggleOpacity(opacity: boolean, callback: any) {
+        console.log('Toggling Opacity, before');
+        console.log('webOpacity: ', webOpacity);
+        console.log('appOpacity: ', appOpacity);
+
+        if (opacity) {
+            callback(false);
+        } else {
+            callback(true);
+        }
+
+        console.log('Toggling Opacity, after');
+        console.log('webOpacity: ', webOpacity);
+        console.log('appOpacity: ', appOpacity);
+    }
+
+    function toggleWeb() {
+        setWebOpacity(!webOpacity);
+    }
+
+    function toggleApp() {
+        setAppOpacity(!appOpacity);
+    }
+
+    const imageLoaded = (callback: any) => {
+        console.log('Image Loaded');
+        callback(false);
+    }
+
     return (
         <div className="tablet:hidden bigPhone:flex flex-col font-display">
             <div className="h-fit pt-10 odd:bg-gray-100">
@@ -202,8 +225,8 @@ const PhoneLanding: React.FC<PropsType> = ({ webOpacity, appOpacity, setAppOpaci
                             <div className="flex py-8">
                                 <div className={`animate-pulse h-10 w-52 bg-gray-300 rounded-lg ${webLoading ? 'flex' : 'hidden'}`}></div>
                                 <div className={`group cursor-pointer relative flex items-center border-gray-400 text-center ${webLoading ? 'hidden' : 'flex'}`}>
-                                    <img src="https://skillicons.dev/icons?i=mongo,express,react,nodejs" onTouchEnd={() => toggleOpacity(webOpacity, setWebOpacity)} onMouseOver={() => toggleOpacity(webOpacity, setWebOpacity)} onMouseLeave={() => toggleOpacity(webOpacity, setWebOpacity)} onLoad={() => { imageLoaded(setWebLoading) }} />
-                                    <div id="webStackTooltip" className={`opacity-${webOpacity} mt-3 w-fit bg-gray-800 text-white text-center text-xs rounded-lg py-2 absolute flex flex-col items-center z-10 top-full px-3 pointer-events-none transition-all duration-300 ease-in-out`}>
+                                    <img src="https://skillicons.dev/icons?i=mongo,express,react,nodejs" onClick={() => { console.log('I am from web stack'); toggleWeb(); }} onLoad={() => { imageLoaded(setWebLoading) }} />
+                                    <div id="webStackTooltip" className={`${webOpacity ? 'opacity-100' : 'opacity-0'} mt-3 w-fit bg-gray-800 text-white text-center text-xs rounded-lg py-2 absolute flex flex-col items-center z-10 top-full px-3 pointer-events-none transition-all duration-300 ease-in-out`}>
                                         <div className="w-3 h-3 rotate-45 -mt-3 bg-gray-800"></div>
                                         MongoDB, Express, React, Node.js
                                     </div>
@@ -221,8 +244,8 @@ const PhoneLanding: React.FC<PropsType> = ({ webOpacity, appOpacity, setAppOpaci
                             <div className="flex py-8">
                                 <div className={`animate-pulse h-10 w-52 bg-gray-300 rounded-lg ${appLoading ? 'flex' : 'hidden'}`}></div>
                                 <div className={`group cursor-pointer relative flex items-center border-gray-400 text-center ${appLoading ? 'hidden' : 'flex'}`}>
-                                    <img src="https://skillicons.dev/icons?i=kotlin,java,flutter,react" onTouchEnd={() => toggleOpacity(appOpacity, setAppOpacity)} onMouseOver={() => toggleOpacity(appOpacity, setAppOpacity)} onMouseLeave={() => toggleOpacity(appOpacity, setAppOpacity)} onLoad={() => { imageLoaded(setAppLoading) }} />
-                                    <div id="appStackTooltip" className={`opacity-${appOpacity} mt-3 w-fit bg-gray-800 text-white text-center text-xs rounded-lg py-2 absolute flex flex-col items-center z-10 top-full px-3 pointer-events-none transition-all duration-300 ease-in-out`}>
+                                    <img src="https://skillicons.dev/icons?i=kotlin,java,flutter,react" onClick={() => { console.log('I am from app stack'); toggleApp(); }} onLoad={() => { imageLoaded(setAppLoading) }} />
+                                    <div id="appStackTooltip" className={`${appOpacity ? 'opacity-100' : 'opacity-0'} mt-3 w-fit bg-gray-800 text-white text-center text-xs rounded-lg py-2 absolute flex flex-col items-center z-10 top-full px-3 pointer-events-none transition-all duration-300 ease-in-out`}>
                                         <div className="w-3 h-3 rotate-45 -mt-3 bg-gray-800"></div>
                                         Kotlin, Java, Flutter, React Native
 
