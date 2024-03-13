@@ -12,7 +12,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
-        display: ["Pragmata", "sans-serif"],
+        display: ["Hack Nerd Font", "sans-serif"],
       },
       animation: {
         slowShow: "slowShow 0.5s ease-in-out",

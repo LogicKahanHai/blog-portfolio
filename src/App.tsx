@@ -1,5 +1,5 @@
 
-import { NavBar } from './components/components'
+import { NavBar, Footer } from './components/components'
 import { Outlet, useNavigation } from 'react-router-dom'
 import * as PageLoaders from './pages/PageLoaders'
 
@@ -19,6 +19,7 @@ function App() {
         <main className="relative w-screen h-screen scroll-smooth">
           <Outlet />
         </main>
+        <Footer />
       </div>
     </>
   )
