@@ -9,6 +9,27 @@
     font-style: medium;
     font-weight: 400;
     font-display: swap;
-    src: url(/public/fonts/Pragmata\ Medium.ttf) format('truetype');
+    src: url(/fonts/Pragmata\ Medium.ttf) format('truetype');
   }
+  @font-face {
+    font-family: 'Hack Nerd Font';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/HackNerdFont-Regular.ttf) format('truetype');
+  }
+    @font-face {
+        font-family: 'Hack Nerd Font';
+        font-style: bold;
+        font-weight: 700;
+        font-display: swap;
+        src: url(/fonts/HackNerdFont-Bold.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: 'Hack Nerd Font';
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/HackNerdFont-Italic.ttf) format('truetype');
+    }
 }
