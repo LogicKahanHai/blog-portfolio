@@ -1,20 +1,7 @@
 
 import { useState } from "react";
 import './LandingPage.css';
-import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
-
-type PropsType = {
-    webOpacity: Boolean,
-    appOpacity: Boolean,
-    setWebOpacity: Function,
-    setAppOpacity: Function,
-    toggleOpacity: Function,
-    webLoading: Boolean,
-    setWebLoading: Function,
-    setAppLoading: Function,
-    appLoading: Boolean,
-    imageLoaded: Function,
-}
+import { Socials } from "../../Common";
 
 const LandingComponent: React.FC = () => {
     return (
@@ -42,6 +29,7 @@ const WebLanding: React.FC = () => {
         callback(false);
     }
 
+
     function toggleOpacity(opacity: boolean, callback: any) {
         if (opacity) {
             callback(false);
@@ -63,23 +51,8 @@ const WebLanding: React.FC = () => {
                                     Hi, I'm Rishi Bhalla (better known as Logic). A passionate Full Stack Web and App Developer based in Punjab, India. 📍
                                 </p>
                             </div>
-                            <div className="flex flex-row gap-5 mb-20">
-                                <a href="https://www.github.com/LogicKahanHai" target="_blank">
-                                    <IconBrandGithub
-                                        size={35}
-                                        color="currentColor"
-                                        stroke={2}
-                                        className="hover:text-indigo-600 transition-all duration-300 ease-in-out cursor-pointer"
-                                    />
-                                </a>
-                                <a href="https://www.linkedin.com/in/rishi-bhalla" target="_blank">
-                                    <IconBrandLinkedin
-                                        size={35}
-                                        color="currentColor"
-                                        stroke={2}
-                                        className="hover:text-indigo-600 transition-all duration-300 ease-in-out cursor-pointer"
-                                    />
-                                </a>
+                            <div className="mb-20">
+                                <Socials />
                             </div>
                             <div className="w-full flex flex-col gap-5 justify-start">
                                 <div className="w-full flex flex-row gap-8 items-center divide-gray-600 divide-x-4 mb-5">
@@ -170,23 +143,8 @@ const PhoneLanding: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-row gap-5 mb-20">
-                        <a href="https://www.github.com/LogicKahanHai" target="_blank">
-                            <IconBrandGithub
-                                size={35}
-                                color="currentColor"
-                                stroke={2}
-                                className="hover:text-indigo-600 transition-all duration-300 ease-in-out cursor-pointer"
-                            />
-                        </a>
-                        <a href="https://www.linkedin.com/in/rishi-bhalla" target="_blank">
-                            <IconBrandLinkedin
-                                size={35}
-                                color="currentColor"
-                                stroke={2}
-                                className="hover:text-indigo-600 transition-all duration-300 ease-in-out cursor-pointer"
-                            />
-                        </a>
+                    <div className="mb-20">
+                        <Socials />
                     </div>
                     <div className="w-full flex flex-col gap-2 items-center divide-gray-600 divide-y-2 mb-5">
                         <p className="font-sans text-lg font-semibold text-gray-600 text-nowrap">
