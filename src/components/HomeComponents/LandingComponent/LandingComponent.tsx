@@ -39,7 +39,7 @@ const WebLanding: React.FC = () => {
   }
   return (
     <div className="tablet:flex font-display hidden h-screen w-screen items-start justify-center transition-all duration-300">
-      <div className="flex h-full w-full items-start justify-center odd:bg-gray-100">
+      <div className="flex h-full w-full items-start justify-center">
         <div className="desktop:w-[75%] desktop:h-[60%] tablet:w-[90%] tablet:h-[60%] tablet:ml-20 mt-20 flex min-h-fit flex-col justify-between">
           <div className="mb-10 flex flex-row items-start">
             <div className="flex flex-1 flex-col py-10">

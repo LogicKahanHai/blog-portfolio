@@ -58,12 +58,11 @@ export default function Navbar(): React.ReactElement {
           )}
           {isHome && (
             <HomeScrollLink
-              to="/"
+              to="root"
               spy={true}
               smooth={true}
-              offset={-200}
+              offset={0}
               duration={700}
-              onClick={scrollToTop}
             >
               <div className="cursor-pointer text-2xl font-bold text-gray-800">
                 Logic Kahan Hai?
@@ -98,7 +97,7 @@ export default function Navbar(): React.ReactElement {
                   to="about"
                   spy={true}
                   smooth={true}
-                  offset={-200}
+                  offset={0}
                   duration={700}
                 >
                   About
