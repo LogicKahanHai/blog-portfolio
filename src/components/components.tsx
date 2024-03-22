@@ -6,5 +6,9 @@ import ErrorPage from "./Error/ErrorPage";
 
 import * as HomeComponents from "./HomeLanding/home";
 
+import ShowMarkdown from "./Markdown/ShowMarkdown";
 
-export { NavBar, ErrorPage, HomeComponents, Footer };
+import Loader from "./Loader/Loader";
+
+export { ErrorPage, Footer, HomeComponents, Loader, NavBar, ShowMarkdown };
+
