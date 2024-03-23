@@ -75,12 +75,12 @@ export default function Navbar(): React.ReactElement {
             <div className="cursor-pointer text-lg font-bold  text-gray-600 transition-all duration-300 ease-in-out hover:text-indigo-600">
               {isHome ? (
                 <HomeScrollLink
-                  to="/"
+                  to="root"
                   spy={true}
                   smooth={true}
-                  offset={-200}
+                  offset={0}
                   duration={700}
-                  onClick={scrollToTop}
+                  // onClick={scrollToTop}
                 >
                   Home
                 </HomeScrollLink>
@@ -103,7 +103,7 @@ export default function Navbar(): React.ReactElement {
                   About
                 </HomeScrollLink>
               ) : (
-                <PageLink to="/#about">About</PageLink>
+                  <PageLink to="/" state={{ scrollTo: "about" }}>About</PageLink>
               )}
             </div>
 

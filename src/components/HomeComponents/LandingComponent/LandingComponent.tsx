@@ -132,7 +132,6 @@ const WebLanding: React.FC = () => {
             </div>
             <div className="flex h-full flex-1 items-center justify-center">
               <div className="hero-img h-[75%] w-[60%] object-fill">
-                {/* <img src="/public/rishi.jpg" alt="Hero" className="h-3/4 w-3/4 object-fill rounded-full hero-img" /> */}
               </div>
             </div>
           </div>
