@@ -49,9 +49,9 @@ const WebAboutComponent = () => {
   return (
     <div className="tablet:flex font-display hidden h-screen w-screen items-start justify-center transition-all duration-300">
       <div className="flex h-full w-full items-center justify-center">
-        <div className="desktop:min-w-[78%] desktop:min-h-[60%] laptop:min-w-[75%] laptop:ml-0 tablet:w-[90%] tablet:h-[60%] tablet:ml-20  flex min-h-fit flex-col justify-between">
-          <div className=" flex flex-row items-start w-full">
-            <div className="flex h-full min-w-[40%] items-center justify-start">
+        <div className="desktop:min-w-[78%] desktop:min-h-[60%] laptop:min-w-[75%] laptop:ml-0 tablet:w-[90%] tablet:h-[60%] tablet:ml-20  flex min-h-fit flex-col justify-center items-center">
+          <div className=" flex flex-row items-start w-[90%]">
+            <div className="flex h-full min-w-[40%] items-center justify-center">
               <div className="about-img laptop:max-desktop:w-[75%] h-[75%] w-[60%] object-fill">
               </div>
             </div>

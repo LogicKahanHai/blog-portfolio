@@ -13,9 +13,9 @@ const Home = () => {
       const element = navState.scrollTo
       setTimeout(() => {
         scroller.scrollTo(element, {
-          duration: 1500,
-          delay: 200,
-          smooth: "easeInOut",
+          duration: 2000,
+          delay: 0,
+          smooth: "easeInOutQuint",
           // containerId: "element",
         });
         console.log("scrolling to", element)
