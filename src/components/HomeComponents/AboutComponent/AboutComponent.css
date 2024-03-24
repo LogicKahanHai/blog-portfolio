@@ -1,4 +1,4 @@
-.hero-img {
+.about-img {
     object-fit: fill;
     background-image: url('/trial.jpg');
     background-repeat: no-repeat;
@@ -12,26 +12,26 @@
 }
 
 @media screen and (min-width: 1280px) {
-    .hero-img {
-        background-position: 77% 47%;
+    .about-img {
+        background-position: 28% 55%;
     }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1279px) {
-    .hero-img {
-        background-position: 75% 45%;
+    .about-img {
+        background-position: 28% 55%;
     }
 }
 
 @media screen and (min-width: 480px) and (max-width: 899px){
-    .hero-img {
-        background-position: 76% 45%;
+    .about-img {
+        background-position: 28% 50%;
     }
 }
 
 @media screen and (max-width: 479px) {
-    .hero-img {
-        background-position: 75% 44%;
+    .about-img {
+        background-position: 30% 50%;
     }
 }
 
