@@ -28,7 +28,7 @@ const Home = () => {
 
 
   return (
-    <div>
+    <div className="flex min-h-fit w-screen flex-col items-center">
       <Element name="landing">
         <section id="landing" className="overflow-x-clip odd:bg-gray-100">
           <HomeComponents.LandingComponent />

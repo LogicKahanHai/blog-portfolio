@@ -177,7 +177,7 @@ const PhoneLanding: React.FC = () => {
             </div>
             <div>
               <p className="text-md bigPhone:text-lg bigPhone:px-20 mb-7 px-5 text-center font-sans text-gray-500">
-                Hi, I'm RIshi Bhalla <br /> &lt; aka LogicKahanHai &gt; <br /> A
+                Hi, I'm Rishi Bhalla <br /> (better known as Logic) <br /> A
                 passionate Full Stack Web and App Developer based in Punjab,
                 India. 📍
               </p>
@@ -186,10 +186,11 @@ const PhoneLanding: React.FC = () => {
           <div className="mb-20">
             <Socials />
           </div>
-          <div className="mb-5 flex w-full flex-col items-center gap-2 divide-y-2 divide-gray-600">
+          <div className="mb-5 flex w-full flex-col items-center gap-2">
             <p className="text-nowrap font-sans text-lg font-semibold text-gray-600">
               Web Stack
             </p>
+            <hr className=" mx-20 mt-4 h-px w-4/5 border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent dark:via-neutral-400" />
 
             <div className="flex flex-col items-center">
               <div className="flex py-8">
@@ -220,10 +221,11 @@ const PhoneLanding: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col items-center gap-2 divide-y-2 divide-gray-600">
+          <div className="flex w-full flex-col items-center gap-2">
             <p className="text-nowrap font-sans text-lg font-semibold text-gray-600">
               App Stack
             </p>
+            <hr className=" mx-20 mt-4 h-px w-4/5 border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent dark:via-neutral-400" />
 
             <div className="flex flex-col items-center">
               <div className="flex py-8">
