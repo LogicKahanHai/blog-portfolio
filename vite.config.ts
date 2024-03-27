@@ -5,6 +5,6 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "dist",
+    outDir: '/var/www/html/blog-website',
   },
 });
