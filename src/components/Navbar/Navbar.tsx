@@ -29,9 +29,10 @@ export default function Navbar(): React.ReactElement {
               <HomeScrollLink
                 to="root"
                 spy={true}
-                smooth={true}
-                offset={-70}
-                duration={scrollDuration}
+                smooth={"easeInOutQuint"}
+                offset={0}
+                duration={scrollDuration + 500}
+
               >
                 Logic Kahan Hai?
               </HomeScrollLink>
