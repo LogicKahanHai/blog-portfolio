@@ -11,16 +11,13 @@ const Home = () => {
     console.log("pathName", navState)
     if (navState) {
       const element = navState.scrollTo
-      setTimeout(() => {
-        scroller.scrollTo(element, {
-          duration: 2000,
-          delay: 0,
-          smooth: "easeInOutQuint",
-          // containerId: "element",
-        });
-        console.log("scrolling to", element)
-      }
-        , 1000)
+      scroller.scrollTo(element, {
+        duration: 2000,
+        delay: 0,
+        smooth: "easeInOutQuint",
+        // containerId: "element",
+      });
+      navState.scrollTo = null;
     }
   }, [navState]);
 
@@ -37,6 +34,11 @@ const Home = () => {
       <Element name="about" >
         <section id="about" className="overflow-x-clip">
           <HomeComponents.AboutComponent />
+        </section>
+      </Element>
+      <Element name="projects" >
+        <section id="projects" className="overflow-x-clip odd:bg-gray-100">
+          <HomeComponents.ProjectsComponent />
         </section>
       </Element>
     </div>

@@ -29,9 +29,10 @@ export default function Navbar(): React.ReactElement {
               <HomeScrollLink
                 to="root"
                 spy={true}
-                smooth={true}
-                offset={-70}
-                duration={scrollDuration}
+                smooth={"easeInOutQuint"}
+                offset={0}
+                duration={scrollDuration + 500}
+
               >
                 Logic Kahan Hai?
               </HomeScrollLink>
@@ -113,7 +114,7 @@ export default function Navbar(): React.ReactElement {
                   to="projects"
                   spy={true}
                   smooth={"easeInOutQuint"}
-                  offset={-200}
+                  offset={0}
                   duration={scrollDuration}
                 >
                   Projects
@@ -125,13 +126,13 @@ export default function Navbar(): React.ReactElement {
 
             {/* Blogs LI */}
 
-            <div className="cursor-pointer text-lg font-bold  text-gray-600 transition-all duration-300 ease-in-out hover:text-indigo-600">
+            {/* <div className="cursor-pointer text-lg font-bold  text-gray-600 transition-all duration-300 ease-in-out hover:text-indigo-600">
               {isHome ? (
                 <HomeScrollLink
                   to="blogs"
                   spy={true}
                   smooth={"easeInOutQuint"}
-                  offset={-200}
+                  offset={0}
                   duration={scrollDuration}
                 >
                   Blogs
@@ -139,7 +140,7 @@ export default function Navbar(): React.ReactElement {
               ) : (
                   <PageLink to="/" state={{ scrollTo: "about" }}>Blogs</PageLink>
               )}
-            </div>
+            </div> */}
 
             {/* Contact LI */}
 
@@ -149,7 +150,7 @@ export default function Navbar(): React.ReactElement {
                   to="contact"
                   spy={true}
                   smooth={"easeInOutQuint"}
-                  offset={-200}
+                  offset={0}
                   duration={scrollDuration}
                 >
                   Contact

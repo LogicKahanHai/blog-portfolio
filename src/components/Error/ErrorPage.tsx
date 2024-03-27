@@ -12,8 +12,7 @@ export default function ErrorPage() {
     } else if (typeof error === 'string') {
         message = error;
     } else {
-        console.error(error);
-        message = 'Unknown error';
+        message = 'Maybe a 404, or something broke... anyway, try again later.';
     }
 
     return (

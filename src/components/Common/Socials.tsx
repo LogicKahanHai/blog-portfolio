@@ -25,7 +25,7 @@ const Socials = () => {
           className="cursor-pointer transition-all duration-300 ease-in-out hover:text-indigo-600"
         />
       </a>
-      <a href="https://www.linkedin.com/in/rishi-bhalla" target="_blank">
+      <a href="https://www.youtube.com/@LogicKahanHai" target="_blank">
         <IconBrandYoutube
           size={35}
           color="currentColor"
