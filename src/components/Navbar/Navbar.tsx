@@ -126,7 +126,7 @@ export default function Navbar(): React.ReactElement {
 
             {/* Blogs LI */}
 
-            <div className="cursor-pointer text-lg font-bold  text-gray-600 transition-all duration-300 ease-in-out hover:text-indigo-600">
+            {/* <div className="cursor-pointer text-lg font-bold  text-gray-600 transition-all duration-300 ease-in-out hover:text-indigo-600">
               {isHome ? (
                 <HomeScrollLink
                   to="blogs"
@@ -140,7 +140,7 @@ export default function Navbar(): React.ReactElement {
               ) : (
                   <PageLink to="/" state={{ scrollTo: "about" }}>Blogs</PageLink>
               )}
-            </div>
+            </div> */}
 
             {/* Contact LI */}
 
