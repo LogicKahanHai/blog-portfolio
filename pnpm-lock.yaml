@@ -8,9 +8,6 @@ dependencies:
   '@headlessui/react':
     specifier: ^1.7.18
     version: 1.7.18(react-dom@18.2.0)(react@18.2.0)
-  '@tabler/icons-react':
-    specifier: ^3.0.1
-    version: 3.0.1(react@18.2.0)
   axios:
     specifier: ^1.6.8
     version: 1.6.8
@@ -680,19 +677,6 @@ packages:
   /@swc/types@0.1.5:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
     dev: true
-
-  /@tabler/icons-react@3.0.1(react@18.2.0):
-    resolution: {integrity: sha512-CaB72mZo3t+DCYfwelPHBp3dCfghocSKESau0AZZGKLozNnh7nOtVk4riH0+UBN2Gu0hKq9DZzIU4dUW8uq+mw==}
-    peerDependencies:
-      react: '>= 16'
-    dependencies:
-      '@tabler/icons': 3.0.1
-      react: 18.2.0
-    dev: false
-
-  /@tabler/icons@3.0.1:
-    resolution: {integrity: sha512-K/ZgJkxWcrMWdkgvS7VmgZ4F6SXM5UPolh2Y/dPTJnRpjMSySzfi93+XvfP2YfAzH7bd4ilqmTp7TADPLHrn0A==}
-    dev: false
 
   /@tanstack/react-virtual@3.1.3(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-YCzcbF/Ws/uZ0q3Z6fagH+JVhx4JLvbSflgldMgLsuvB8aXjZLLb3HvrEVxY480F9wFlBiXlvQxOyXb5ENPrNA==}
