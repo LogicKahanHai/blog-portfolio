@@ -1,5 +1,5 @@
 import React from "react";
-import { IconMap, IconMail } from "@tabler/icons-react";
+import { Common } from "../../components";
 
 const ContactComponent: React.FC = () => {
     return (
@@ -31,7 +31,7 @@ const ContactPhoneComponent: React.FC = () => {
                                         <div className="flex w-full flex-col items-center justify-center gap-5">
                                             <div className="flex w-full flex-col items-center justify-center gap-5">
                                                 <div className=" rounded-full shadow-md bg-white p-5 shadow-indigo-600/45">
-                                                    <IconMap size={32} stroke={2} className=" text-indigo-600" color="currentColor" />
+                                                    <Common.Icons.Map size={32} stroke={2} className=" text-indigo-600" color="currentColor" />
                                                 </div>
                                                 <span className="text-sm text-gray-600 cursor-default">
                                                     Jalandhar, Punjab, India
@@ -41,7 +41,7 @@ const ContactPhoneComponent: React.FC = () => {
                                                 <div className=" rounded-full shadow-md bg-white p-5 shadow-indigo-600/45" onTouchEnd={() => {
                                                     window.open("mailto:contact.logickahanhai@gmail.com");
                                                 }}>
-                                                    <IconMail size={32} stroke={2} className=" text-indigo-600" color="currentColor" />
+                                                    <Common.Icons.Mail size={32} stroke={2} className=" text-indigo-600" color="currentColor" />
                                                 </div>
                                                 <span className="text-center font-bold font-display">
                                                     Mail
@@ -79,7 +79,7 @@ const ContactWebComponent: React.FC = () => {
                                 <div className="flex w-full flex-row items-center justify-around gap-5">
                                     <div className="flex w-full flex-row justify-center items-center gap-5">
                                         <div className=" rounded-full shadow-md bg-white p-5 shadow-indigo-600/45">
-                                            <IconMap size={32} stroke={2} className=" text-indigo-600" color="currentColor" />
+                                            <Common.Icons.Map size={32} stroke={2} className=" text-indigo-600" color="currentColor" />
                                         </div>
                                         <span className="text-lg text-gray-600 cursor-default hover:text-indigo-600 transition-all duration-300">
                                             Jalandhar, Punjab, India
@@ -87,7 +87,7 @@ const ContactWebComponent: React.FC = () => {
                                     </div>
                                     <a className="flex w-full flex-row items-center justify-center gap-5" href="mailto:contact.logickahanhai@gmail.com">
                                         <div className=" rounded-full shadow-md bg-white p-5 shadow-indigo-600/45">
-                                            <IconMail size={32} stroke={2} className=" text-indigo-600" color="currentColor" />
+                                            <Common.Icons.Mail size={32} stroke={2} className=" text-indigo-600" color="currentColor" />
                                         </div>
                                         <span className="text-lg text-gray-600 cursor-pointer hover:text-indigo-600 transition-all duration-300">
                                             contact.logickahanhai@gmail.com

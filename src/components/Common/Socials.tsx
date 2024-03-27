@@ -1,16 +1,10 @@
-import {
-  IconBrandGithub,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconBrandX,
-  IconBrandYoutube,
-} from "@tabler/icons-react";
+import Icons from "./Icons";
 
 const Socials = () => {
   return (
     <div className="flex flex-row gap-5">
       <a href="https://www.github.com/LogicKahanHai" target="_blank">
-        <IconBrandGithub
+        <Icons.BrandGitHub
           size={35}
           color="currentColor"
           stroke={2}
@@ -18,7 +12,7 @@ const Socials = () => {
         />
       </a>
       <a href="https://www.linkedin.com/in/rishi-bhalla" target="_blank">
-        <IconBrandLinkedin
+        <Icons.BrandLinkedIn
           size={35}
           color="currentColor"
           stroke={2}
@@ -26,7 +20,7 @@ const Socials = () => {
         />
       </a>
       <a href="https://www.youtube.com/@LogicKahanHai" target="_blank">
-        <IconBrandYoutube
+        <Icons.BrandYoutube
           size={35}
           color="currentColor"
           stroke={2}
@@ -34,7 +28,7 @@ const Socials = () => {
         />
       </a>
       <a href="https://twitter.com/LogicKiTalaash" target="_blank">
-        <IconBrandX
+        <Icons.BrandX
           size={35}
           color="currentColor"
           stroke={2}
@@ -42,7 +36,7 @@ const Socials = () => {
         />
       </a>
       <a href="https://www.instagram.com/logickitalaash/" target="_blank">
-        <IconBrandInstagram
+        <Icons.BrandInstagram
           size={35}
           color="currentColor"
           stroke={2}

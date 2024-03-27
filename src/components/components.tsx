@@ -10,4 +10,6 @@ import ShowMarkdown from "./Markdown/ShowMarkdown";
 
 import Loader from "./Loader/Loader";
 
-export { ErrorPage, Footer, HomeComponents, Loader, NavBar, ShowMarkdown };
+import * as Common from "./Common";
+
+export { ErrorPage, Footer, HomeComponents, Loader, NavBar, ShowMarkdown, Common };
