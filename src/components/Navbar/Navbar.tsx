@@ -113,7 +113,7 @@ export default function Navbar(): React.ReactElement {
                   to="projects"
                   spy={true}
                   smooth={"easeInOutQuint"}
-                  offset={-200}
+                  offset={0}
                   duration={scrollDuration}
                 >
                   Projects
@@ -131,7 +131,7 @@ export default function Navbar(): React.ReactElement {
                   to="blogs"
                   spy={true}
                   smooth={"easeInOutQuint"}
-                  offset={-200}
+                  offset={0}
                   duration={scrollDuration}
                 >
                   Blogs
@@ -149,7 +149,7 @@ export default function Navbar(): React.ReactElement {
                   to="contact"
                   spy={true}
                   smooth={"easeInOutQuint"}
-                  offset={-200}
+                  offset={0}
                   duration={scrollDuration}
                 >
                   Contact

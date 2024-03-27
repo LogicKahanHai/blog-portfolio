@@ -26,7 +26,7 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
           console.log(match);
           return match ? (
             <div className="flex w-full justify-center">
-              <div className="my-3 w-2/3 border-2 border-gray-800 px-2 py-4">
+              <div className="my-3 w-2/3 max-laptop:w-full border-2 border-gray-800 px-2 py-4">
                 <SyntaxHighlighter
                   {...(props as SyntaxHighlighterProps)}
                   PreTag="div"
@@ -38,7 +38,7 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
             </div>
           ) : (
             <span
-              className={`m-1 rounded-md bg-gray-300 px-2 py-1 text-sm font-medium text-black ${className}`}
+                className={`m-1 rounded-md bg-gray-300 px-2 py-1 text-sm font-semibold text-black text-nowrap ${className}`}
               {...props}
             >
               {children}
@@ -56,7 +56,7 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
               <div className="flex w-full justify-center">
                 <div className="flex w-2/3 justify-center">
                   <p
-                    className="text-center text-xl font-light"
+                    className="text-center text-xl font-light font-poppins"
                     children={children}
                     {...props}
                   />
@@ -68,7 +68,7 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
           return (
             <div className="mb-3 flex justify-start">
               <p
-                className="text-left text-lg font-light"
+                className="text-left text-lg font-light font-poppins"
                 children={children}
                 {...props}
               />

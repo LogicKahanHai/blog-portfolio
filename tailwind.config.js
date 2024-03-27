@@ -11,8 +11,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
         display: ["Hack Nerd Font", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       animation: {
         slowShow: "slowShow 0.5s ease-in-out",

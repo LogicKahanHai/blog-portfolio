@@ -17,9 +17,15 @@ const router = createBrowserRouter([
         element: <Pages.Home />,
         // errorElement: <Components.ErrorPage />,
       },
+      // { path: "about", element: <Pages.About /> },
+      // { path: "contact", element: <Pages.Contact /> },
       { path: "projects/:projectId", element: <Pages.ProjectPage /> },
     ],
   },
+  {
+    path: "*",
+    element: <Components.ErrorPage />,
+  }
 ]);
 
 if (!import.meta.env.DEV) {
