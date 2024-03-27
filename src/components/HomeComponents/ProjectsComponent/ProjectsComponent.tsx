@@ -117,7 +117,7 @@ const WebProjectsComponent = ({
                         </button>
                       )}
                       {projects.length <= 5 && (
-                        <div className="rounded-lg bg-gray-300 px-5 py-2 text-gray-600">
+                        <div className="rounded-lg bg-gray-300 px-5 py-2 text-gray-600 cursor-wait">
                           Many more to come....
                         </div>
                       )}

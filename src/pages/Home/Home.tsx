@@ -41,6 +41,11 @@ const Home = () => {
           <HomeComponents.ProjectsComponent />
         </section>
       </Element>
+      <Element name="contact" >
+        <section id="contact" className="overflow-x-clip">
+          <HomeComponents.ContactComponent />
+        </section>
+      </Element>
     </div>
   );
 };
