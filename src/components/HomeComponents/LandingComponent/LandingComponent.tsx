@@ -38,13 +38,13 @@ const WebLanding: React.FC = () => {
     }
   }
   return (
-    <div className="tablet:flex font-display hidden h-screen w-screen items-start justify-center transition-all duration-300">
+    <div className="hidden h-screen w-screen items-start justify-center font-display transition-all duration-300 tablet:flex">
       <div className="flex h-full w-full items-start justify-center">
-        <div className="desktop:w-[75%] desktop:h-[60%] tablet:w-[90%] tablet:h-[60%] tablet:ml-20 mt-20 flex min-h-fit flex-col justify-between">
+        <div className="mt-20 flex min-h-fit flex-col justify-between tablet:ml-20 tablet:h-[60%] tablet:w-[90%] desktop:h-[60%] desktop:w-[75%]">
           <div className="mb-10 flex flex-row items-start">
-            <div className="flex flex-1 flex-col py-10">
+            <div className="left-entry flex flex-1 flex-col py-10">
               <div>
-                <h1 className="font-display mb-10 text-4xl font-bold">
+                <h1 className="mb-10 font-display text-4xl font-bold">
                   Full Stack Web and App Developer 🧑‍💻
                 </h1>
               </div>
@@ -59,7 +59,7 @@ const WebLanding: React.FC = () => {
               </div>
               <div className="flex w-full flex-col justify-start gap-5">
                 <div className="mb-5 flex w-full flex-row items-center gap-8 divide-x-4 divide-gray-600">
-                  <p className="font-display text-nowrap text-lg font-semibold text-gray-600">
+                  <p className="text-nowrap font-display text-lg font-semibold text-gray-600">
                     Web Stack
                   </p>
                   <div className="flex flex-col items-center">
@@ -94,7 +94,7 @@ const WebLanding: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex w-full flex-row items-center gap-8 divide-x-4 divide-gray-600">
-                  <p className="font-display text-nowrap text-lg font-semibold text-gray-600">
+                  <p className="text-nowrap font-display text-lg font-semibold text-gray-600">
                     App Stack
                   </p>
                   <div className="flex flex-col items-center">
@@ -130,9 +130,8 @@ const WebLanding: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="flex h-full flex-1 items-center justify-center">
-              <div className="hero-img h-[75%] w-[60%] object-fill">
-              </div>
+            <div className="right-entry flex h-full flex-1 items-center justify-center">
+              <div className="hero-img h-[75%] w-[60%] object-fill"></div>
             </div>
           </div>
         </div>
@@ -163,20 +162,20 @@ const PhoneLanding: React.FC = () => {
   };
 
   return (
-    <div className="tablet:hidden font-display flex flex-col">
+    <div className="flex flex-col font-display tablet:hidden">
       <div className="h-fit pt-10 odd:bg-gray-100">
         <div className="flex flex-col items-center justify-center">
-          <div className="bigPhone:max-w-[22rem] bigPhone:min-h-[22rem] hero-img mb-10 h-[60%] min-h-[15rem] w-[75%] max-w-[15rem] object-fill">
+          <div className="hero-img mb-10 h-[60%] min-h-[15rem] w-[75%] max-w-[15rem] object-fill bigPhone:min-h-[22rem] bigPhone:max-w-[22rem]">
             {/* <img src="/public/rishi.jpg" alt="Hero" className="h-3/4 w-3/4 object-fill rounded-full hero-img" /> */}
           </div>
-          <div className=" bigPhone:px-20 bigPhone:mb-10 mb-5 px-10">
+          <div className=" mb-5 px-10 bigPhone:mb-10 bigPhone:px-20">
             <div>
-              <h1 className="bigPhone:text-4xl mb-10 text-center font-sans text-3xl font-bold">
+              <h1 className="mb-10 text-center font-sans text-3xl font-bold bigPhone:text-4xl">
                 Full Stack Web and App Developer 🧑‍💻
               </h1>
             </div>
             <div>
-              <p className="text-md bigPhone:text-lg bigPhone:px-20 mb-7 px-5 text-center font-sans text-gray-500">
+              <p className="text-md mb-7 px-5 text-center font-sans text-gray-500 bigPhone:px-20 bigPhone:text-lg">
                 Hi, I'm Rishi Bhalla <br /> (better known as Logic) <br /> A
                 passionate Full Stack Web and App Developer based in Punjab,
                 India. 📍
