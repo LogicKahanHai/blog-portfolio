@@ -92,6 +92,15 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
             />
           );
         },
+        iframe({ ...props }) {
+          return (
+            <div className="w-full justify-center items-center flex my-5">
+              <iframe
+                {...props}
+              />
+            </div>
+          );
+        }
         // img({ node, title, ...props }) {
         //     return <img title="Hello" {...props} />
         // }
