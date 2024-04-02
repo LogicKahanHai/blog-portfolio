@@ -1,16 +1,18 @@
-import { useEffect } from "react";
-import { HomeComponents } from "../../components/components";
-import { scroller, Element } from "react-scroll";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { Element, scroller } from "react-scroll";
+import { HomeComponents } from "../../components/components";
 
 const Home = () => {
+  const [earlyStart, setEarlyStart] = useState(false);
+  const [lateStart, setLateStart] = useState(false);
 
   const navState = useLocation().state;
 
   useEffect(() => {
-    console.log("pathName", navState)
+    console.log("pathName", navState);
     if (navState) {
-      const element = navState.scrollTo
+      const element = navState.scrollTo;
       scroller.scrollTo(element, {
         duration: 2000,
         delay: 0,
@@ -21,27 +23,34 @@ const Home = () => {
     }
   }, [navState]);
 
-
-
+  const postProjectLoad = () => {
+    setEarlyStart(true);
+    setTimeout(() => {
+      setLateStart(true);
+    }, 300);
+  };
 
   return (
     <div className="flex min-h-fit w-screen flex-col items-center">
       <Element name="landing">
         <section id="landing" className="overflow-x-clip odd:bg-gray-100">
-          <HomeComponents.LandingComponent />
+          <HomeComponents.LandingComponent
+            earlyStart={earlyStart}
+            lateStart={lateStart}
+          />
         </section>
       </Element>
-      <Element name="about" >
+      <Element name="about">
         <section id="about" className="overflow-x-clip">
           <HomeComponents.AboutComponent />
         </section>
       </Element>
-      <Element name="projects" >
+      <Element name="projects">
         <section id="projects" className="overflow-x-clip odd:bg-gray-100">
-          <HomeComponents.ProjectsComponent />
+          <HomeComponents.ProjectsComponent postLoading={postProjectLoad} />
         </section>
       </Element>
-      <Element name="contact" >
+      <Element name="contact">
         <section id="contact" className="overflow-x-clip">
           <HomeComponents.ContactComponent />
         </section>

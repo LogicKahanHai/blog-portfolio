@@ -6,7 +6,13 @@ import { Loader } from "../../components";
 
 type DateTimeFormatOptions = Intl.DateTimeFormatOptions;
 
-const ProjectsComponent: React.FC = () => {
+type ProjectsComponentProps = {
+  postLoading: VoidFunction;
+};
+
+const ProjectsComponent: React.FC<ProjectsComponentProps> = ({
+  postLoading,
+}) => {
   const formatDate = (date: string) => {
     const options: DateTimeFormatOptions = {
       year: "numeric",
@@ -27,6 +33,7 @@ const ProjectsComponent: React.FC = () => {
     console.log(response);
     setProjects(response.data);
     setLoading(false);
+    postLoading();
   };
 
   useEffect(() => {
@@ -39,7 +46,8 @@ const ProjectsComponent: React.FC = () => {
       <PhoneProjectsComponent
         loading={loading}
         projects={projects}
-        formatDate={formatDate} />
+        formatDate={formatDate}
+      />
 
       {/* Web */}
       <WebProjectsComponent
@@ -64,9 +72,9 @@ const WebProjectsComponent = ({
     <>
       {loading && <Loader />}
       {!loading && (
-        <div className="tablet:flex font-display hidden h-screen w-screen items-start justify-center">
+        <div className="hidden h-screen w-screen items-start justify-center font-display tablet:flex">
           <div className="flex h-full w-full items-center justify-center">
-            <div className="desktop:min-w-[78%] desktop:min-h-[60%] laptop:min-w-[75%] laptop:ml-0 tablet:w-[90%] tablet:h-[60%] tablet:ml-20  flex min-h-fit flex-col items-center justify-center">
+            <div className="flex min-h-fit flex-col items-center justify-center tablet:ml-20 tablet:h-[60%]  tablet:w-[90%] laptop:ml-0 laptop:min-w-[75%] desktop:min-h-[60%] desktop:min-w-[78%]">
               <div className=" flex w-[90%] flex-row items-start">
                 <div className="flex w-full flex-col gap-5 py-10">
                   <div>
@@ -80,7 +88,7 @@ const WebProjectsComponent = ({
                         return (
                           <Link to={`/projects/${blog.id}`} key={blog.id}>
                             <div className="group flex w-full cursor-pointer flex-col gap-2 border-2 p-4 shadow-sm transition-all duration-500 ease-in-out hover:z-10 hover:border-black hover:shadow-xl">
-                              <h2 className="text-2xl font-sans font-normal text-gray-900 transition-all duration-500 ease-in-out group-hover:font-bold group-hover:text-indigo-600">
+                              <h2 className="font-sans text-2xl font-normal text-gray-900 transition-all duration-500 ease-in-out group-hover:font-bold group-hover:text-indigo-600">
                                 {blog.title}
                               </h2>
                               <div className="flex flex-col gap-1.5">
@@ -88,7 +96,7 @@ const WebProjectsComponent = ({
                                   {formatDate(blog.dateTime)}
                                 </p>
 
-                                <p className="text-sm text-gray-600 font-sans">
+                                <p className="font-sans text-sm text-gray-600">
                                   {blog.teaser}
                                 </p>
 
@@ -117,7 +125,7 @@ const WebProjectsComponent = ({
                         </button>
                       )}
                       {projects.length <= 5 && (
-                        <div className="rounded-lg bg-gray-300 px-5 py-2 text-gray-600 cursor-wait">
+                        <div className="cursor-wait rounded-lg bg-gray-300 px-5 py-2 text-gray-600">
                           Many more to come....
                         </div>
                       )}
@@ -142,14 +150,13 @@ const PhoneProjectsComponent = ({
   projects: Project[];
   formatDate: (date: string) => string;
 }) => {
-
   return (
     <>
       {loading && <Loader />}
       {!loading && (
-        <div className="tablet:hidden font-display flex h-fit w-screen items-center justify-center">
+        <div className="flex h-fit w-screen items-center justify-center font-display tablet:hidden">
           <div className="flex h-full w-full items-center justify-center">
-            <div className="desktop:min-w-[78%] desktop:min-h-[60%] laptop:min-w-[75%] laptop:ml-0 tablet:w-[90%] tablet:h-[60%] tablet:ml-20  flex min-h-fit flex-col items-center justify-center">
+            <div className="flex min-h-fit flex-col items-center justify-center tablet:ml-20 tablet:h-[60%]  tablet:w-[90%] laptop:ml-0 laptop:min-w-[75%] desktop:min-h-[60%] desktop:min-w-[78%]">
               <div className=" flex w-[90%] flex-row items-start">
                 <div className="flex w-full flex-col gap-5 py-10">
                   <div>
@@ -162,8 +169,8 @@ const PhoneProjectsComponent = ({
                       {(projects as Project[]).map((blog: Project) => {
                         return (
                           <Link to={`/projects/${blog.id}`} key={blog.id}>
-                            <div className="group flex w-full cursor-pointer flex-col gap-2 border-2 p-4 transition-all duration-500 ease-in-out hover:z-10 border-black shadow-xl">
-                              <h2 className="text-2xl font-sans text-gray-900 transition-all duration-500 ease-in-out font-semibold">
+                            <div className="group flex w-full cursor-pointer flex-col gap-2 border-2 border-black p-4 shadow-xl transition-all duration-500 ease-in-out hover:z-10">
+                              <h2 className="font-sans text-2xl font-semibold text-gray-900 transition-all duration-500 ease-in-out">
                                 {blog.title}
                               </h2>
                               <div className="flex flex-col gap-1.5">
@@ -171,8 +178,11 @@ const PhoneProjectsComponent = ({
                                   {formatDate(blog.dateTime)}
                                 </p>
 
-                                <p className="text-sm text-gray-600 font-sans truncate">
-                                  {blog.teaser.split(" ").slice(0, 10).join(" ")}
+                                <p className="truncate font-sans text-sm text-gray-600">
+                                  {blog.teaser
+                                    .split(" ")
+                                    .slice(0, 10)
+                                    .join(" ")}
                                   {blog.teaser.split(" ").length > 10 && "..."}
                                 </p>
 

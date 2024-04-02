@@ -14,7 +14,7 @@
 @keyframes enterFadeFromLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateX(-60%);
     }
     100% {
         opacity: 1;
@@ -25,12 +25,20 @@
 @keyframes enterFadeFromRight {
     0% {
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateX(60%);
     }
     100% {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.left-entry {
+    animation: enterFadeFromLeft 1s ease-in-out;
+}
+
+.right-entry {
+    animation: enterFadeFromRight 1s ease-in-out;
 }
 
 @media screen and (min-width: 1280px) {
