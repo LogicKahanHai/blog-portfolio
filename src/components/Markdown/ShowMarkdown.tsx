@@ -4,6 +4,7 @@ import { SyntaxHighlighterProps } from "react-syntax-highlighter";
 import { githubGist } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 
 const ShowMarkdown = ({ markdown }: { markdown: string }) => {
   return (
@@ -26,7 +27,7 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
           console.log(match);
           return match ? (
             <div className="flex w-full justify-center">
-              <div className="my-3 w-2/3 max-laptop:w-full border-2 border-gray-800 px-2 py-4">
+              <div className="my-3 w-2/3 border-2 border-gray-800 px-2 py-4 max-laptop:w-full">
                 <SyntaxHighlighter
                   {...(props as SyntaxHighlighterProps)}
                   PreTag="div"
@@ -38,7 +39,7 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
             </div>
           ) : (
             <span
-                className={`m-1 rounded-md bg-gray-300 px-2 py-1 text-sm font-semibold text-black text-nowrap ${className}`}
+              className={`m-1 text-nowrap rounded-md bg-gray-300 px-2 py-1 text-sm font-semibold text-black ${className}`}
               {...props}
             >
               {children}
@@ -56,7 +57,7 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
               <div className="flex w-full justify-center">
                 <div className="flex w-2/3 justify-center">
                   <p
-                    className="text-center text-xl font-light font-poppins"
+                    className="text-center font-poppins text-xl font-light"
                     children={children}
                     {...props}
                   />
@@ -68,7 +69,7 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
           return (
             <div className="mb-3 flex justify-start">
               <p
-                className="text-left text-lg font-light font-poppins"
+                className="text-left font-poppins text-lg font-light"
                 children={children}
                 {...props}
               />
@@ -92,11 +93,19 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
             />
           );
         },
+        iframe({ ...props }) {
+          return (
+            <div className="my-5 flex w-full items-center justify-center">
+              <iframe {...props} />
+            </div>
+          );
+        },
         // img({ node, title, ...props }) {
         //     return <img title="Hello" {...props} />
         // }
       }}
       rehypePlugins={[rehypeRaw]}
+      remarkPlugins={[remarkGfm]}
     >
       {`${markdown}`}
     </Markdown>
