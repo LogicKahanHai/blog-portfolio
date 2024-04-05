@@ -204,7 +204,7 @@ const PhoneProjectsComponent = ({
                         );
                       })}{" "}
                     </div>
-                    <div className="mt-10 flex w-full justify-end">
+                    <div className="mt-10 flex w-full justify-end px-10">
                       {projects.length > 5 && (
                         <button className="rounded-lg bg-indigo-600 px-5 py-2 text-white">
                           View All
