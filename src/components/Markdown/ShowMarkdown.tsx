@@ -23,7 +23,6 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
         },
         code({ children, className, ...props }) {
           const match = /language-(\w+)/.exec(className || "");
-          console.log(match);
           return match ? (
             <div className="flex w-full justify-center">
               <div className="my-3 w-2/3 max-laptop:w-full border-2 border-gray-800 px-2 py-4">
@@ -38,7 +37,7 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
             </div>
           ) : (
             <span
-                className={`m-1 rounded-md bg-gray-300 px-2 py-1 text-sm font-semibold text-black text-nowrap ${className}`}
+                className={`m-1 rounded-md bg-indigo-500 px-2 py-1 text-sm font-semibold text-white text-nowrap ${className}`}
               {...props}
             >
               {children}
@@ -54,9 +53,9 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
           if (hasImage) {
             return (
               <div className="flex w-full justify-center">
-                <div className="flex w-2/3 justify-center">
+                <div className="flex w-2/3 max-laptop:w-full justify-center">
                   <p
-                    className="text-center text-xl font-light font-poppins"
+                    className="text-center text-xl max-bigPhone:text-sm max-laptop:text-lg font-light font-poppins"
                     children={children}
                     {...props}
                   />

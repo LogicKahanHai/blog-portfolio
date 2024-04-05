@@ -68,7 +68,7 @@ const ProjectPage: React.FC = () => {
                       className="max-w-[60px] max-bigPhone:max-w-[50px] rounded-full"
                     />
                   </div>
-                  <div className="text-nowrap px-8">
+                  <div className="text-nowrap px-8 max-bigPhone:px-8">
                     <p className="text-lg font-semibold">Rishi Bhalla</p>
                     <p className="text-base font-light italic">
                       {formatDate(project.dateTime)}
