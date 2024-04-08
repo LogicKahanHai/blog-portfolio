@@ -6,13 +6,7 @@ import { Loader } from "../../components";
 
 type DateTimeFormatOptions = Intl.DateTimeFormatOptions;
 
-type ProjectsComponentProps = {
-  postLoading: VoidFunction;
-};
-
-const ProjectsComponent: React.FC<ProjectsComponentProps> = ({
-  postLoading,
-}) => {
+const ProjectsComponent: React.FC = () => {
   const formatDate = (date: string) => {
     const options: DateTimeFormatOptions = {
       year: "numeric",
@@ -33,7 +27,6 @@ const ProjectsComponent: React.FC<ProjectsComponentProps> = ({
     console.log(response);
     setProjects(response.data);
     setLoading(false);
-    postLoading();
   };
 
   useEffect(() => {
