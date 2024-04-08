@@ -4,6 +4,7 @@ import { SyntaxHighlighterProps } from "react-syntax-highlighter";
 import { githubGist } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 
 const ShowMarkdown = ({ markdown }: { markdown: string }) => {
   return (
@@ -25,7 +26,9 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
           const match = /language-(\w+)/.exec(className || "");
           return match ? (
             <div className="flex w-full justify-center">
+              
               <div className="my-5 w-2/3 max-laptop:w-full border-2 border-gray-800 px-2 ">
+
                 <SyntaxHighlighter
                   {...(props as SyntaxHighlighterProps)}
                   PreTag="div"
@@ -67,7 +70,7 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
           return (
             <div className="mb-3 flex justify-start">
               <p
-                className="text-left text-lg font-light font-poppins"
+                className="text-left font-poppins text-lg font-light"
                 children={children}
                 {...props}
               />
@@ -93,18 +96,17 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
         },
         iframe({ ...props }) {
           return (
-            <div className="w-full justify-center items-center flex my-5">
-              <iframe
-                {...props}
-              />
+            <div className="my-5 flex w-full items-center justify-center">
+              <iframe {...props} />
             </div>
           );
-        }
+        },
         // img({ node, title, ...props }) {
         //     return <img title="Hello" {...props} />
         // }
       }}
       rehypePlugins={[rehypeRaw]}
+      remarkPlugins={[remarkGfm]}
     >
       {`${markdown}`}
     </Markdown>
