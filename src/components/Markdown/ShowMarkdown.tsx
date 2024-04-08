@@ -25,7 +25,7 @@ const ShowMarkdown = ({ markdown }: { markdown: string }) => {
           const match = /language-(\w+)/.exec(className || "");
           return match ? (
             <div className="flex w-full justify-center">
-              <div className="my-3 w-2/3 max-laptop:w-full border-2 border-gray-800 px-2 py-4">
+              <div className="my-5 w-2/3 max-laptop:w-full border-2 border-gray-800 px-2 ">
                 <SyntaxHighlighter
                   {...(props as SyntaxHighlighterProps)}
                   PreTag="div"

@@ -11,15 +11,19 @@ const Home = () => {
 
   useEffect(() => {
     console.log("pathName", navState);
-    if (navState) {
+    if (navState && navState.scrollTo) {
       const element = navState.scrollTo;
+      console.log("element", element);
       scroller.scrollTo(element, {
         duration: 2000,
         delay: 0,
         smooth: "easeInOutQuint",
+        offset: element == "projects" ? -100 : null,
         // containerId: "element",
       });
-      navState.scrollTo = null;
+      setTimeout(() => {
+        navState.scrollTo = null;
+      }, 2000);
     }
   }, [navState]);
 
@@ -51,7 +55,7 @@ const Home = () => {
         </section>
       </Element>
       <Element name="contact">
-        <section id="contact" className="overflow-x-clip">
+        <section id="contact" className="overflow-x-clip ">
           <HomeComponents.ContactComponent />
         </section>
       </Element>

@@ -54,7 +54,7 @@ const WebLanding: React.FC<LandingComponentProps> = ({
         <div className="mt-20 flex min-h-fit flex-col justify-between tablet:ml-20 tablet:h-[60%] tablet:w-[90%] desktop:h-[60%] desktop:w-[75%]">
           <div className="mb-10 flex flex-row items-start">
             <div
-              className={`flex flex-1 flex-col py-10 ${earlyStart ? "left-entry" : ""}`}
+              className={`flex flex-1 flex-col py-10 ${earlyStart ? "left-entry" : "hidden"}`}
             >
               <div>
                 <h1 className="mb-10 font-display text-4xl font-bold">
@@ -144,7 +144,7 @@ const WebLanding: React.FC<LandingComponentProps> = ({
               </div>
             </div>
             <div
-              className={`flex h-full flex-1 items-center justify-center ${lateStart ? "right-entry" : ""} `}
+              className={`flex h-full flex-1 items-center justify-center ${lateStart ? "right-entry" : "hidden"} `}
             >
               <div className="hero-img h-[75%] w-[60%] object-fill"></div>
             </div>
