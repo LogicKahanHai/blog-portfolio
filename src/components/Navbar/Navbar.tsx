@@ -3,7 +3,6 @@ import { Link as PageLink } from "react-router-dom";
 import { Link as HomeScrollLink } from "react-scroll";
 
 export default function Navbar(): React.ReactElement {
-
   const scrollDuration = 2000;
 
   const [isHome, setIsHome] = useState(false);
@@ -21,7 +20,7 @@ export default function Navbar(): React.ReactElement {
   return (
     <>
       {/* bigPhone */}
-      <header className="tablet:hidden phone:flex font-display sticky left-0 right-0 top-0 z-50">
+      <header className="sticky left-0 right-0 top-0 z-50 font-display phone:flex tablet:hidden">
         <div className="flex h-16 w-full items-center justify-between bg-white px-5 shadow-md">
           <div className="cursor-pointer text-xl font-bold text-gray-800">
             {!isHome && <PageLink to="/">Logic Kahan Hai?</PageLink>}
@@ -32,7 +31,6 @@ export default function Navbar(): React.ReactElement {
                 smooth={"easeInOutQuint"}
                 offset={0}
                 duration={scrollDuration + 500}
-
               >
                 Logic Kahan Hai?
               </HomeScrollLink>
@@ -45,7 +43,7 @@ export default function Navbar(): React.ReactElement {
       </header>
 
       {/* desktop */}
-      <header className="tablet:flex font-display sticky left-0 right-0 top-0 z-50 hidden">
+      <header className="sticky left-0 right-0 top-0 z-50 hidden font-display tablet:flex">
         <div className="flex w-full items-center justify-between bg-white px-20 py-8 shadow-md">
           {/* <div className="flex items-center gap-5"> */}
           {!isHome && (
@@ -102,7 +100,9 @@ export default function Navbar(): React.ReactElement {
                   About
                 </HomeScrollLink>
               ) : (
-                  <PageLink to="/" state={{ scrollTo: "about" }}>About</PageLink>
+                <PageLink to="/" state={{ scrollTo: "about" }}>
+                  About
+                </PageLink>
               )}
             </div>
 
@@ -114,13 +114,15 @@ export default function Navbar(): React.ReactElement {
                   to="projects"
                   spy={true}
                   smooth={"easeInOutQuint"}
-                  offset={0}
+                  offset={-100}
                   duration={scrollDuration}
                 >
                   Projects
                 </HomeScrollLink>
               ) : (
-                  <PageLink to="/" state={{ scrollTo: "projects" }}>Projects</PageLink>
+                <PageLink to="/" state={{ scrollTo: "projects" }}>
+                  Projects
+                </PageLink>
               )}
             </div>
 
@@ -156,7 +158,9 @@ export default function Navbar(): React.ReactElement {
                   Contact
                 </HomeScrollLink>
               ) : (
-                  <PageLink to="/" state={{ scrollTo: "about" }}>Contact</PageLink>
+                <PageLink to="/" state={{ scrollTo: "contact" }}>
+                  Contact
+                </PageLink>
               )}
             </div>
           </div>

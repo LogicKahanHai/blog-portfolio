@@ -1,6 +1,6 @@
 .hero-img {
     object-fit: fill;
-    background-image: url('/me.jpg');
+    background-image: url("/me.jpg");
     background-repeat: no-repeat;
     background-position: 75% 47%;
     border: 3px solid #2d2e32;
@@ -9,6 +9,36 @@
     /* height: 35rem;
     width: 35rem; */
     transition: all 1s ease-in-out;
+}
+
+@keyframes enterFadeFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes enterFadeFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.left-entry {
+    animation: enterFadeFromLeft 1s ease-in-out;
+}
+
+.right-entry {
+    animation: enterFadeFromRight 1s ease-in-out;
 }
 
 @media screen and (min-width: 1280px) {
@@ -23,7 +53,7 @@
     }
 }
 
-@media screen and (min-width: 480px) and (max-width: 899px){
+@media screen and (min-width: 480px) and (max-width: 899px) {
     .hero-img {
         background-position: 76% 45%;
     }
@@ -45,5 +75,4 @@
     100% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
-    
 }

@@ -21,7 +21,7 @@ const ContactPhoneComponent: React.FC = () => {
                                 <h1 className="text-center font-display text-3xl font-bold text-indigo-600">
                                     Contact
                                 </h1>
-                                <p className="mt-10 px-5">
+                                <p className="mt-10 px-5 text-center">
                                     I am always open to new opportunities and collaborations. You can reach me at the following email.
                                 </p>
                             </div>
